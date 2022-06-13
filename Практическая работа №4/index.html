@@ -1,0 +1,40 @@
+<div class="form-wrap">
+  <div class="profile"><img src="img/Картинка-01.png">
+    <h1>Регистрация</h1>
+  </div>
+  <form method="post" action="check.php">
+    <div>
+	<label  for="surname">Фамилия<span>*</span></label>
+      <input type="text" name="surname" required>
+	<label for="name">Имя<span>*</span></label>
+      <input type="text" name="name" required>
+	  </div>
+    <p><div class="radio">
+      <span>Пол</span>
+      <label><input type="radio" name="sex" value="мужской">мужской</label>
+      <label><input type="radio" name="sex" value="женский">женский</label>
+    </div>
+	<div>
+	<p><label for="сolor">Цвет глаз</label>
+          <input type="color" name="bg" value="#ff0000"> <input type="submit" value="Выбрать"></p>
+	</div>
+	<div>
+	<label for="age">Возраст</label>
+      <input type="number" name="age" min="18" max="100" value="18">
+	</div><p>
+	<div><p>
+      <label for="country">Откуда узнали о нас ?</label>
+      <select name="country">
+        <option>Выберите пункт</option>
+        <option value="Россия">Из рекламы</option> 
+        <option value="Украина">Увидела в городе</option> 
+        <option value="Беларусь">По совету знакомых</option> 
+      </select>
+	  <div>
+      <label for="email">Email<span>*</span></label>
+      <input type="email" name="email" required>
+      </div>
+	<p><div><input type="checkbox" required > Нажимая кнопку "Отправить" Вы даёте свое согласие на обработку персональных данных.</div>
+    <p><div><input type="reset" value="Очистить"></div><p><div><button type="submit">Отправить</button></div>
+  </form> 
+</div>
