@@ -1,0 +1,30 @@
+ul li
+{
+	list-style-type:none;
+	display:inline
+}
+li a
+{
+	display:block;
+	float:left
+}
+a
+{
+	font-family:Tahoma,Helvetica,sans-serif;
+	text-decoration:none;
+	color:#fff
+}
+a
+{
+	display:block;
+	float:left;
+	padding:4px 10px;
+	background:#193D6A
+}
+a:hover
+{
+	background:#408BE8;
+	padding:7px 14px;
+	position:relative;
+	top:-3px
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+<title>JavaScript</title>
+<script>
+function Hello(){
+    var newWin=window.open("","","width=400,height=300"), str="",
+    f = document.getElementById("f").value, n  = document.getElementById("n").value;
+    str += ' Рады тебя видеть"!<BR>';
+    str += '<INPUT type="button" value="закрыть" onClick="window.close();">';
+    newWin.document.write("Добро пожаловать, "+n+" "+f+"<br>"+str);
+}
+function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}
+</script>
+<script type="text/javascript">
+        function Area() {
+            var side1 = parseInt(document
+                .getElementById("side1").value);
+  
+            var side2 = parseInt(document
+                .getElementById("side2").value);
+  
+            var side3 = parseInt(document
+                .getElementById("side3").value);
+  
+            console.log(typeof(side1));
+            var s = (side1 + side2 + side3) / 2;
+  
+            var area = Math.sqrt(s * ((s - side1) 
+                    * (s - side2) * (s - side3)));
+  
+            document.getElementById(
+                "display").innerHTML = area;
+        }
+    </script>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: #D7E8D4;
+    order: 3;
+  }
+  #main > aside {
+    background: beige;
+    order: 2;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+</style>
+<body>
+  <header><div><b>JavaScript это язык, который позволяет применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее,
+  чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе,
+  и т.д. — можно быть увереным, что скорее всего, не обошлось без JavaScript.</b></div>
+  <div><ul>
+    <li><a href="#" >Приветствие</a></li>
+    <li><a href="#">Площадь треугольника</a></li>
+    <li><a href="#">Сравнение строк</a></li>
+    <li><a href="#">Массив</a></li>
+</ul></div>
+   </header>
+  <div id="main">
+    <article>
+	<h1 style="color:green;"> 
+            Приветствие пользователя</h1>
+			<form>
+        <label>Фамилия  <input type='text' value="" size="25" id='f'></label>
+        <label>Имя  <input type='text' value="" size="25" id='n'></label>
+        <input type='button' value="Войти" size="25"  onClick="Hello()">
+    </form></article>
+    <nav>2</nav>
+    <aside>1</aside>
+  </div>
+    <div id="main">
+    <article>
+	 </h4>
+  <h1 style="color:green;"> 
+            Вычисление площади треугольника</h1>
+    <label for="side1">
+        Введите сторону 1: 
+    </label>
+      
+    <input type="number" id="side1" 
+        placeholder="Число 1">
+    <br><br>
+  
+    <label for="side2">
+        Введите сторону 2: 
+    </label>
+      
+    <input type="number" id="side2" 
+        placeholder="Число 2">
+    <br><br>
+  
+    <label for="side3">
+        Введите сторону 3: 
+    </label>
+      
+    <input type="number" id="side3" 
+        placeholder="Число 3">
+    <br><br>
+  
+    <button onclick="Area()">Вычислить</button>
+  
+    <p>
+        Площадь заданного треугольника: <span id="display"></span>
+    </p>
+    </article>
+    <nav>2</nav>
+    <aside>1</aside>
+  </div>
+    <div id="main">
+    <article>
+	<h1 style="color:green;"> 
+            Сравнение двух строк
+        </h1> Строка 1:
+    <input type="text" id="text1" name="tname1">
+    <br>
+    <br> Строка 2:
+    <input type="text" id="text2" name="tname2">
+    <br>
+    <br>
+    <button onclick="gfg_Run()"> Сравнить </button>
+    <p id="GFG_DOWN" style="color:green;
+              font-size: 20px;
+              font-weight: bold;"> </p>
+			  <script>
+        var str1 = document.getElementById("text1");
+        var str2 = document.getElementById("text2");
+        var el_down = document.getElementById("GFG_DOWN");
+     
+        function gfg_Run() {
+            var a = str1.value;
+            var b = str2.value;
+            var ans = a.localeCompare(b);
+            var res = "";
+            if(ans == -1) {
+                res = '"' + a + '" содержит меньше символов, чем "' + b + '"';
+            } else if(ans == 0) {
+                res = 'Обе строки равны';
+            } else {
+                res = '"' + a + '" содержит больше символов, чем "' + b + '"';
+            }
+            el_down.innerHTML = res;
+        }
+    </script>
+	</article>
+    <nav>2</nav>
+    <aside>1</aside>
+  </div>
+   </div>
+    <div id="main">
+    <article>
+	<h1 style="color:green;"> 
+            Максимальный и минимальный элемент массива
+        </h1>
+	<script>
+	Array.prototype.min = function(){
+    var min = parseInt(this[this.length-1]), el;
+    for(var i=this.length-2; i>=0; i--){
+        el = parseInt(this[i]);
+        if(el<min){
+            min = el;
+        }
+    }
+    return min;
+};
+
+Array.prototype.max = function(){
+    var max = parseInt(this[this.length-1]), el;
+    for(var i=this.length-2; i>=0; i--){
+        el = parseInt(this[i]);
+        if(el>max){
+            max = el;
+        }
+    }
+    return max;
+};
+var array = [1,2,3,4,5];
+document.write("Дан массив: 1,2,3,5");
+document.write('</br>');
+document.write("Минимальный элемент: " + array.min());// -1
+document.write('</br>');
+document.write("Максимальный элемент: " + array.max());// 8
+	</script>
+	</article>
+    <nav>2</nav>
+    <aside>1</aside>
+  </div>
+  </div>
+  <footer>Программирование интернет приложений</footer>
+</body>
