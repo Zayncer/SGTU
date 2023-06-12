@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Практика</title>
+<head></head>
+<body>
+<h1>Практическая работа № 1</h2>
+<div>
+1) Cоздать переменную, узнать ее тип, добавить вывод на экран текста, в зависимости от значения (if else).<br>
+<form id = "1" onsubmit = "return checkForm1(this)" method = "post">
+<label for = "Переменная">Переменная:</label>
+<input type = "number" name = "number" id = "11" required>
+<input type = "submit" name = "submit" value = "Отправить">
+</form>
+</div>
+<br>
+<script src = "JavaScript.js"></script>
+<div>
+2) Запросить у пользователя знак зодиака, и в зависимости от ответа выдать всплывающее окно приветствия
+<br> (вместо знака зодиака, можно запросить другие данные, предполагающие несколько вариантов ответа) (switch).<br>
+<form id = "2" onsubmit = "return checkForm2(this)" method = "post">
+<label for = "Знак зодиака">Знак зодиака:</label>
+<input type = "text" name = "name" id = "22" required>
+<input type = "submit" name = "submit" value = "Отправить">
+</form>
+</div>
+<br>
+<div>
+3) Вывести все числа от 1 до 40, с использованием 3-х разных циклов:<br>
+<form id = "3" onsubmit = "return num_1(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом FOR">
+</form>
+<form id = "4" onsubmit = "return num_2(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом WHILE">
+</form>
+<form id = "5" onsubmit = "return num_3(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом DO WHILE">
+</form>
+</div>
+<br>
+<div>
+4) Cоздайте вирусную страницу с постоянно повторяющемся сообщением.
+<form id = "6" onsubmit = "return fun_1(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вирусное сообщение">
+</form>
+</div>
+</br>
+<div>
+5) Запросить у пользователя любое число больше 5, в случае правильного ответа выдать окошко с поздравлением,<br>
+в случае неправильного ответа вывести повторное окно с вопросом (помните, что пользователь может нажать "отмена",<br>
+помните о типах данных).
+<form id = "7" onsubmit = "return fun_2(this)" method = "post"><br>
+<label for = "Сообщение">Введите любое число больше 5:</label>
+<input type = "number" name = "number" id = "55" required>
+<input type = "submit" name = "submit" value = "Начать выполнение">
+</form>
+</div>
+<br>
+<div>
+6) Вывести четные числа от 8 до 20.
+<form id = "8" onsubmit = "return fun_3(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+7) Вывести нечетные числа от 1 до 7, пропустив 5.
+<form id = "9" onsubmit = "return fun_4(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<h1>Практическая работа № 2</h2>
+<div>
+1) Cоздать массив 3 разными способами. <b>Смотри консоль.</b>
+<form id = "10" onsubmit = "return fun_5(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Первый способ">
+</form>
+<form id = "11" onsubmit = "return fun_6(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Второй способ">
+</form>
+<form id = "12" onsubmit = "return fun_7(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Третий способ">
+</form>
+</div>
+<br>
+<div>
+2) Выведите на экран 5 член вашего массива затем измените его значение.
+<form id = "13" onsubmit = "return fun_8(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+3) Узнайте длину вашего массива и выведите ее значение при наведении на любой элемент.
+<form id = "14" onsubmit = "return fun_9(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Создать массив">
+</form>
+</div>
+<br>
+<div>
+4) Выведите все элементы массива, используя цикл for.
+<form id = "15" onsubmit = "return fun_10(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+5) Cоздайте 2 массива. Объедините их в один и выведите на экран полученный массив.
+<form id = "16" onsubmit = "return fun_11(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+6) Удалите последний член получившегося массива и выведите это значение на экран.
+<form id = "17" onsubmit = "return fun_12(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+7) Добавьте новый элемент в начало вашего объединенного массива.
+<form id = "18" onsubmit = "return fun_13(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form>
+</div>
+<br>
+<div>
+8) Получите сегодняшнюю дату и выведите ее на экран.
+<form id = "19" onsubmit = "return fun_14(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести текущую дату">
+</form>
+</div>
+<br>
+<div>
+9) Выведите сегодняшнюю дату в формате 11 ноября 2020 года.
+<form id = "20" onsubmit = "return fun_15(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести дату">
+</form>
+</div>
+<br>
+<div>
+10) Напишите функцию, подсчитывающую произведение двух случайных чисел в промежутке от нуля до 50.
+<form id = "21" onsubmit = "return fun_16(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вызвать функцию">
+</form>
+</div>
+</body>
+</html>

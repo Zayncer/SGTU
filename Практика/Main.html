@@ -1,0 +1,256 @@
+<!doctype html>
+<title>Landing Page</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .col-1 {
+    background: #483D8B;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    background: #9370DB;
+    height: 20vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+   #zatemnenie {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #okno {
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #0000cc;
+        border-radius: 10px;
+        color: #0000cc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+      }
+      #zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+      .close:hover {background: #e6e6ff;}
+</style>
+<body>
+  <nav class="col-1">
+  <ul>
+  <li><a href="#1">Задание 1</a></li>
+  <li><a href="#2">Задание 2</a></li>
+  <li><a href="#3">Задание 3</a></li>
+  <li><a href="#4">Задание 4</a></li>
+  <li><a href="#5">Задание 5</a></li>
+  <li><a href="#6">Задание 6</a></li>
+  <li><a href="#7">Задание 7</a></li>
+  <li><a href="#8">Задание 8</a></li>
+  <li><a href="#9">Задание 9</a></li>
+  <li><a href="#10">Задание 10</a></li>
+  <li><a href="#11">Задание 11</a></li>
+  <li><a href="#12">Задание 12</a></li>
+  <li><a href="#13">Задание 13</a></li>
+  <li><a href="#14">Задание 14</a></li>
+  <li><a href="#15">Задание 15</a></li>
+  <li><a href="#16">Задание 16</a></li>
+  <li><a href="#17">Задание 17</a></li>
+  </ul>
+<form action="Test.html" target="_blank">
+<button>Пройти тест на знание JS</button></form><br>
+
+<div id="zatemnenie"><div id="okno">Приветствую!<br>
+<a href="#" class="close">Закрыть окно</a></div></div>
+<a href="#zatemnenie">Вызвать всплывающее окно</a>
+  </nav>
+  <div class="col-2">
+  	<header><h2>JavaScript - язык сценариев, с его помощью можно создавать интерактивные html-документы, 
+	производить вычисления, выполнять проверку допустимости данных без обращения к серверу.</h2></header>
+<button onclick="checkAnswer()"><b>Приветствие</b></button>
+<div id="answer"></div>
+    <main class="content">
+<article>
+<details>
+<summary name = "1">Задание 1</summary>
+<p>1) Cоздать переменную, узнать ее тип, добавить вывод на экран текста, в зависимости от значения (if else).<br>
+<form id = "1" onsubmit = "return checkForm1(this)" method = "post">
+<label for = "Переменная">Переменная:</label>
+<input type = "number" name = "number" id = "11" required>
+<input type = "submit" name = "submit" value = "Отправить">
+</form></p>
+</details><br>
+<details>
+<summary name = "2">Задание 2</summary>
+<p>2) Запросить у пользователя знак зодиака, и в зависимости от ответа выдать всплывающее окно приветствия
+(вместо знака зодиака, можно запросить другие данные, предполагающие несколько вариантов ответа) (switch).<br>
+<form id = "2" onsubmit = "return checkForm2(this)" method = "post">
+<label for = "Знак зодиака">Знак зодиака:</label>
+<input type = "text" name = "name" id = "22" required>
+<input type = "submit" name = "submit" value = "Отправить">
+</form></p>
+</details><br>
+<details>
+<summary name = "3">Задание 3</summary>
+<p>3) Вывести все числа от 1 до 40, с использованием 3-х разных циклов:<br>
+<form id = "3" onsubmit = "return num_1(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом FOR">
+</form>
+<form id = "4" onsubmit = "return num_2(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом WHILE">
+</form>
+<form id = "5" onsubmit = "return num_3(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести циклом DO WHILE">
+</form></p>
+</details><br>
+<details>
+<summary name = "4">Задание 4</summary>
+<p>4) Cоздайте вирусную страницу с постоянно повторяющемся сообщением.
+<form id = "6" onsubmit = "return fun_1(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вирусное сообщение">
+</form></p>
+</details><br>
+<details>
+<summary name = "5">Задание 5</summary>
+<p>5) Запросить у пользователя любое число больше 5, в случае правильного ответа выдать окошко с поздравлением,
+в случае неправильного ответа вывести повторное окно с вопросом (помните, что пользователь может нажать "отмена",
+помните о типах данных).
+<form id = "7" onsubmit = "return fun_2(this)" method = "post"><br>
+<label for = "Сообщение">Введите любое число больше 5:</label>
+<input type = "number" name = "number" id = "55" required>
+<input type = "submit" name = "submit" value = "Начать выполнение">
+</form></p>
+</details><br>
+<details>
+<summary name = "6">Задание 6</summary>
+<p>6) Вывести четные числа от 8 до 20.
+<form id = "8" onsubmit = "return fun_3(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "7">Задание 7</summary>
+<p>7) Вывести нечетные числа от 1 до 7, пропустив 5.
+<form id = "9" onsubmit = "return fun_4(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "8">Задание 8</summary>
+<p>8) Cоздать массив 3 разными способами. <b>Смотри консоль.</b>
+<form id = "10" onsubmit = "return fun_5(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Первый способ">
+</form>
+<form id = "11" onsubmit = "return fun_6(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Второй способ">
+</form>
+<form id = "12" onsubmit = "return fun_7(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Третий способ">
+</form></p>
+</details><br>
+<details>
+<summary name = "9">Задание 9</summary>
+<p>9) Выведите на экран 5 член вашего массива затем измените его значение.
+<form id = "13" onsubmit = "return fun_8(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "10">Задание 10</summary>
+<p>10) Узнайте длину вашего массива и выведите ее значение при наведении на любой элемент.
+<form id = "14" onsubmit = "return fun_9(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Создать массив">
+</form></p>
+</details><br>
+<details>
+<summary name = "11">Задание 11</summary>
+<p>11) Выведите все элементы массива, используя цикл for.
+<form id = "15" onsubmit = "return fun_10(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "12">Задание 12</summary>
+<p>12) Cоздайте 2 массива. Объедините их в один и выведите на экран полученный массив.
+<form id = "16" onsubmit = "return fun_11(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "13">Задание 13</summary>
+<p>13) Удалите последний член получившегося массива и выведите это значение на экран.
+<form id = "17" onsubmit = "return fun_12(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "14">Задание 14</summary>
+<p>14) Добавьте новый элемент в начало вашего объединенного массива.
+<form id = "18" onsubmit = "return fun_13(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести в консоль">
+</form></p>
+</details><br>
+<details>
+<summary name = "15">Задание 15</summary>
+<p>15) Получите сегодняшнюю дату и выведите ее на экран.
+<form id = "19" onsubmit = "return fun_14(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести текущую дату">
+</form></p>
+</details><br>
+<details>
+<summary name = "16">Задание 16</summary>
+<p>16) Выведите сегодняшнюю дату в формате 11 ноября 2020 года.
+<form id = "20" onsubmit = "return fun_15(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вывести дату">
+</form></p>
+</details><br>
+<details>
+<summary name = "17">Задание 17</summary>
+<p>17) Напишите функцию, подсчитывающую произведение двух случайных чисел в промежутке от нуля до 50.
+<form id = "21" onsubmit = "return fun_16(this)" method = "post"><br>
+<input type = "submit" name = "submit" value = "Вызвать функцию">
+</form></p>
+</details>
+</article>
+    </main>
+  	<footer><s>Колесников А.Д.<br>Б1-ИФСТипу21</s></footer>
+ </div>
+</body>
+<script src = "JavaScript.js"></script></p>
